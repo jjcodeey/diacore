@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10283f">
+    <title>DIACORE Dialysis Center HMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="dc-header">
+        <a class="dc-brand" href="#top" aria-label="DIACORE Dialysis Center HMS home">
+            <img src="asset/logo.png" alt="DIACORE logo">
+            <span>DIACORE <small>Dialysis Center HMS</small></span>
+        </a>
+        <nav class="dc-nav" aria-label="Main navigation">
+            <a class="active" href="#home">Home</a>
+            <div class="dc-nav-dropdown" id="about-dropdown">
+                <button class="dc-nav-dropdown-toggle" id="about-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="about-dropdown-menu">About Us</button>
+                <div class="dc-nav-dropdown-menu" id="about-dropdown-menu">
+                    <button type="button" data-about-page="diacore">About DiaCore</button>
+                    <button type="button" data-about-page="team">About Our Team</button>
+                </div>
+            </div>
+            <a href="#centers">Find Center</a>
+            <a href="#services">Services</a>
+            <a href="#patient-education" data-education-open>Patient Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a class="dc-header-action" href="#account">Login <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top" class="dc-shell">
+        <section class="dashboard-section" id="home" aria-labelledby="home-title">
+            <div class="welcome-hero">
+                <p class="dc-eyebrow">WELCOME TO DIACORE DIALYSIS CENTER</p>
+                <h1 id="home-title">Who We Are</h1>
+                <h2>DiaCore Dialysis Center</h2>
+                <p class="welcome-tagline">Your Partner in Compassionate Kidney Care</p>
+                <p class="welcome-description">DiaCore Dialysis Center is a healthcare facility concept dedicated to supporting individuals living with kidney disease through compassionate, safe, and patient-centered care. We aim to be a trusted resource for patients and families, while promoting collaboration with healthcare professionals in the delivery of quality kidney care.</p>
+                <p class="welcome-description">Guided by compassion, integrity, respect, and patient safety, we strive to create a supportive environment where every patient is treated with dignity and understanding throughout their dialysis journey.</p>
+                <div class="welcome-actions">
+                    <button type="button" class="welcome-button welcome-button-primary" data-about-page-trigger="services">Explore Our Services</button>
+                    <button type="button" class="welcome-button welcome-button-secondary" data-about-page-trigger="diacore">Learn More About Us</button>
+                </div>
+            </div>
+            <section class="why-choose-section" aria-labelledby="why-choose-title">
+                <div class="why-choose-heading">
+                    <p class="dc-eyebrow">WHY CHOOSE US</p>
+                    <h2 id="why-choose-title">Why Choose DiaCore?</h2>
+                    <p>Compassionate care, patient safety, and comfort at every step of your dialysis journey.</p>
+                </div>
+                <div class="why-choose-grid">
+                    <article class="why-choose-card"><span class="why-choose-icon" aria-hidden="true">♡</span><h3>Quality and Patient Safety</h3><p>Patient-centered care, safety awareness, and kidney health education.</p></article>
+                    <article class="why-choose-card"><span class="why-choose-icon" aria-hidden="true">⌂</span><h3>Comfort and Convenience</h3><p>A welcoming environment designed around patient comfort and support.</p></article>
+                    <article class="why-choose-card"><span class="why-choose-icon" aria-hidden="true">✚</span><h3>Accessibility and Affordability</h3><p>Clear service information and guidance on applicable healthcare benefits.</p></article>
+                    <article class="why-choose-card"><span class="why-choose-icon" aria-hidden="true">♡</span><h3>Patient-Centered Care</h3><p>Compassion, dignity, respect, and support throughout the dialysis journey.</p></article>
+                </div>
+            </section>
+        </section>
+
+        <section class="education-section" aria-labelledby="education-title">
+            <div class="education-section-heading">
+                <div><p class="dc-eyebrow">LEARN ABOUT YOUR CARE</p><h2 id="education-title">Patient Education</h2></div>
+                <p>Helpful information to support your kidney health and dialysis journey.</p>
+            </div>
+            <div class="education-card-grid">
+                <article class="education-card">
+                    <img src="asset/kidney-disease.png" alt="Illustration of the urinary system and kidneys" loading="lazy">
+                    <div class="education-card-copy"><span>01</span><h3>Understanding Kidney Disease</h3><p>Learn how your kidneys work, what kidney disease is, and why treatment may be needed.</p><button type="button" data-education-topic="kidney-disease">Read More <span aria-hidden="true">→</span></button></div>
+                </article>
+                <article class="education-card">
+                    <img src="asset/understanding-dialysis.png" alt="Patient receiving hemodialysis in a treatment room" loading="lazy">
+                    <div class="education-card-copy"><span>02</span><h3>Understanding Dialysis</h3><p>Discover how dialysis helps remove waste and excess fluid from the blood.</p><button type="button" data-education-topic="dialysis">Read More <span aria-hidden="true">→</span></button></div>
+                </article>
+                <article class="education-card">
+                    <img src="asset/kidney-nutrition.png" alt="Balanced meal with vegetables, rice, fish, and fruit" loading="lazy">
+                    <div class="education-card-copy"><span>03</span><h3>Nutrition and Diet</h3><p>Understand sodium, potassium, phosphorus, and fluid guidance for kidney health.</p><button type="button" data-education-topic="nutrition">Read More <span aria-hidden="true">→</span></button></div>
+                </article>
+                <article class="education-card">
+                    <img src="asset/dialysis-access-care.png" alt="Illustration of an arteriovenous fistula for hemodialysis access" loading="lazy">
+                    <div class="education-card-copy"><span>04</span><h3>Dialysis Access Care</h3><p>Learn how to protect your dialysis access and recognize signs of infection.</p><button type="button" data-education-topic="access-care">Read More <span aria-hidden="true">→</span></button></div>
+                </article>
+                <article class="education-card">
+                    <img src="asset/medication-management.png" alt="Patient organizing medication and writing a medication list" loading="lazy">
+                    <div class="education-card-copy"><span>05</span><h3>Medication Management</h3><p>Learn why prescribed medicines and following your treatment plan matter.</p><button type="button" data-education-topic="medications">Read More <span aria-hidden="true">→</span></button></div>
+                </article>
+                <article class="education-card">
+                    <img src="asset/daily-self-care.png" alt="Patient checking blood pressure as part of daily self-care" loading="lazy">
+                    <div class="education-card-copy"><span>06</span><h3>Daily Self-Care</h3><p>Explore daily health monitoring, preparing for dialysis, and when to seek medical help.</p><button type="button" data-education-topic="self-care">Read More <span aria-hidden="true">→</span></button></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="locations-section" id="centers" aria-labelledby="locations-title">
+            <div class="section-title-row">
+                <div><p class="dc-eyebrow">FIND A DIALYSIS CENTER</p><h2 id="locations-title">Care near you.</h2></div>
+                <label class="location-search"><span aria-hidden="true">⌕</span><span class="visually-hidden">Search locations</span><input id="location-query" type="search" placeholder="Search Sumulong"></label>
+            </div>
+            <div class="location-list" id="location-list">
+                <article class="location-item" data-location="sumulong">
+                    <span class="location-index">01</span><div><p class="panel-kicker">DIALYSIS CENTER</p><h3>Sumulong</h3></div><span class="location-arrow" aria-hidden="true">↗</span>
+                </article>
+            </div>
+            <p class="location-empty" id="location-empty" hidden>No matching location. Search Sumulong.</p>
+        </section>
+
+        <section class="about-section" id="about" aria-labelledby="about-title">
+            <div class="about-heading"><p class="dc-eyebrow">ABOUT US</p><h2 id="about-title">Supporting your<br>kidney care.</h2></div>
+            <div class="about-copy">
+                <p>Dialysis is a treatment that helps remove waste and extra fluid from the blood when the kidneys can no longer do so effectively. It supports the body's balance of fluids and minerals.</p>
+                <p>Hemodialysis filters blood through a machine, while peritoneal dialysis uses the lining of the abdomen. A nephrologist helps determine the appropriate care plan for each patient.</p>
+                <span class="medical-note">For general information only. Follow your healthcare provider's advice for personal care.</span>
+            </div>
+        </section>
+
+        <section class="account-section" id="account" aria-labelledby="account-title">
+            <video class="account-background-video" id="account-background-video" autoplay muted playsinline preload="auto" aria-hidden="true">
+                <source src="asset/backk.mp4" type="video/mp4">
+            </video>
+            <div class="account-copy">
+                <p class="dc-eyebrow">ACCOUNT ACCESS</p>
+                <h2 id="account-title">Welcome to<br>DIACORE.</h2>
+                <p>Choose your account type to continue.</p>
+                <div class="account-info"><span class="account-info-mark" aria-hidden="true">i</span><span>Patients create an account before login. Don't use any account for admin</span></div>
+            </div>
+            <div class="auth-panel">
+                <div class="role-toggle" role="group" aria-label="Choose account type">
+                    <button class="role-button active" id="patient-role" type="button" aria-pressed="true">Patient</button>
+                    <button class="role-button" id="admin-role" type="button" aria-pressed="false">Admin</button>
+                </div>
+                <div class="auth-tabs" id="patient-tabs" role="tablist" aria-label="Patient account actions">
+                    <button class="auth-tab active" id="patient-signup-tab" type="button" aria-selected="true">Create account</button>
+                    <button class="auth-tab" id="patient-login-tab" type="button" aria-selected="false">Login</button>
+                </div>
+                <div class="auth-tabs admin-tabs" id="admin-tabs" role="tablist" aria-label="Admin account actions" hidden>
+                    <span class="admin-access-label">ADMIN  </span>
+                </div>
+                <form class="auth-form" id="patient-signup-form">
+                    <h3>Create patient account</h3><p class="form-intro">Register first to access the patient portal.</p>
+                    <label>Full name<input type="text" name="patient-name" placeholder="Your full name" autocomplete="name" required></label>
+                    <label>Email address<input type="email" name="patient-email" placeholder="you@gmail.com" autocomplete="email" required></label>
+                    <label>Create password<span class="password-input-wrap"><input id="patient-password" type="password" name="patient-password" placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required><button class="password-toggle" type="button" data-password-toggle aria-controls="patient-password" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+                    <button class="auth-submit" type="submit">Create account <span aria-hidden="true">↗</span></button>
+                    <p class="form-message" aria-live="polite"></p>
+                </form>
+                <form class="auth-form" id="patient-login-form" autocomplete="on" hidden>
+                    <h3>Patient login</h3><p class="form-intro">Login is available after patient registration.</p>
+                    <label>Email address<input type="email" name="patient-login-email" placeholder="you@gmail.com" autocomplete="username" required></label>
+                    <label>Password<span class="password-input-wrap"><input id="patient-login-password" type="password" name="patient-login-password" placeholder="Enter your password" autocomplete="current-password" required><button class="password-toggle" type="button" data-password-toggle aria-controls="patient-login-password" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+                    <button class="auth-submit" type="submit">Login as patient <span aria-hidden="true">↗</span></button>
+                    <p class="form-message" aria-live="polite"></p>
+                    <div class="recovery-links"><button type="button" data-account-recovery="password">Forgot password?</button><button type="button" data-account-recovery="email">Forgot email?</button></div>
+                </form>
+                <form class="auth-form" id="admin-login-form" autocomplete="on" hidden>
+                    <h3>Admin login</h3>
+                    <p class="admin-access-label">ADMIN &amp; CARE TEAM ACCOUNTS ONLY</p>
+                    <p class="form-intro"></p>
+                    <label>Staff login email<input type="email" name="admin-email" placeholder="surname@diacore.com" autocomplete="username" required></label>
+                    <label>Password<span class="password-input-wrap"><input id="admin-password" type="password" name="admin-password" placeholder="Enter your password" autocomplete="current-password" required><button class="password-toggle" type="button" data-password-toggle aria-controls="admin-password" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+                    <button class="auth-submit" type="submit">Login <span aria-hidden="true">↗</span></button>
+                    <p class="form-message" aria-live="polite"></p>
+                    <div class="recovery-links"><button type="button" data-account-recovery="password">Forgot password?</button><button type="button" data-account-recovery="email">Forgot email?</button></div>
+                </form>
+                <p class="demo-disclaimer">Account and Privacy Notice
+
+For your security and privacy, please use your own account and never share your login credentials with anyone you do not know or trust. Your account information, medical records, and other personal data are securely stored and protected within this system. Please keep your account credentials confidential to help prevent unauthorized access.</p>
+            </div>
+        </section>
+
+        <section class="services-section" id="services" aria-label="DIACORE services">
+            <div class="services-slider" aria-roledescription="carousel" aria-label="DIACORE services">
+                <div class="services-copy" aria-live="polite">
+                    <p class="dc-eyebrow">DIACORE SERVICES</p>
+                    <p class="services-count" data-service-count>01 / 04</p>
+                    <h2 data-service-title>In-Center Hemodialysis</h2>
+                    <p class="services-description" data-service-description>Patients visit the center 2 to 3 times a week for a machine to filter waste and fluid from their blood.</p>
+                    <p class="services-source" data-service-source>Source: Mayo Clinic</p>
+                    <div class="services-pagination" aria-label="Choose a service">
+                        <button type="button" class="service-dot is-current" data-service-slide="0" aria-label="Show In-Center Hemodialysis" aria-current="true"></button>
+                        <button type="button" class="service-dot" data-service-slide="1" aria-label="Show Home Dialysis Support and Training"></button>
+                        <button type="button" class="service-dot" data-service-slide="2" aria-label="Show Routine Lab Testing"></button>
+                        <button type="button" class="service-dot" data-service-slide="3" aria-label="Show Dietary and Nutritional Counseling"></button>
+                    </div>
+                </div>
+                <div class="services-visual" data-service-visual tabindex="0" role="group" aria-label="Service image. Swipe or use the arrow keys to browse services.">
+                    <img data-service-image src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Healthcare professional providing care in a clinical setting" draggable="false">
+                    <div class="services-image-caption"><span data-service-caption>In-Center Hemodialysis</span><span data-service-count-image>01 / 04</span></div>
+                    <div class="services-image-controls">
+                        <button type="button" data-service-previous aria-label="Previous service">‹</button>
+                        <button type="button" data-service-next aria-label="Next service">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <dialog class="account-recovery-dialog" id="account-recovery-dialog" aria-labelledby="account-recovery-title">
+            <div class="account-recovery-heading">
+                <div><p class="dc-eyebrow">ACCOUNT SETTINGS</p><h2 id="account-recovery-title">Change password</h2></div>
+                <button class="account-recovery-close" type="button" aria-label="Close account settings">×</button>
+            </div>
+            <p class="account-recovery-intro" id="account-recovery-intro"></p>
+            <form class="recovery-form" id="patient-recovery-form" hidden>
+                <label>Email address<input name="email" type="email" autocomplete="username" required></label>
+                <label>Current password<span class="password-input-wrap"><input id="patient-recovery-current-password" name="currentPassword" type="password" autocomplete="current-password" required><button class="password-toggle" type="button" data-password-toggle aria-controls="patient-recovery-current-password" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+                <label>New password<span class="password-input-wrap"><input id="patient-recovery-new-password" name="newPassword" type="password" minlength="8" autocomplete="new-password" required><button class="password-toggle" type="button" data-password-toggle aria-controls="patient-recovery-new-password" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+                <button class="auth-submit" type="submit">Update password</button>
+                <p class="form-message" data-recovery-message aria-live="polite"></p>
+            </form>
+            <form class="recovery-form" id="admin-recovery-form" hidden>
+                <label>Admin account name<input name="adminName" autocomplete="name" required></label>
+                <label>Current password<span class="password-input-wrap"><input id="admin-recovery-current-password" name="currentPassword" type="password" autocomplete="current-password" required><button class="password-toggle" type="button" data-password-toggle aria-controls="admin-recovery-current-password" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+                <label data-recovery-email-field hidden>New login email<input name="newEmail" type="email" autocomplete="email" disabled></label>
+                <label data-recovery-password-field hidden>New password<span class="password-input-wrap"><input id="admin-recovery-new-password" name="newPassword" type="password" minlength="8" autocomplete="new-password" disabled><button class="password-toggle" type="button" data-password-toggle aria-controls="admin-recovery-new-password" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+                <button class="auth-submit" type="submit">Update account</button>
+                <p class="form-message" data-recovery-message aria-live="polite"></p>
+            </form>
+            <div class="recovery-email-help" id="patient-email-help" hidden>
+                <p class="form-intro">Patient login emails are managed by a DIACORE administrator. Contact the care team to confirm or update your email address.</p>
+                <a href="mailto:diacoredialysiscenter@gmail.com">diacoredialysiscenter@gmail.com</a>
+            </div>
+        </dialog>
+
+        <section class="about-detail-section" id="about-details" aria-label="About Us" hidden>
+            <div class="about-detail-header"><p class="dc-eyebrow">ABOUT US</p><button class="about-detail-close" type="button" aria-label="Close About Us">×</button></div>
+            <article class="about-detail-page" data-about-page-content="diacore" hidden>
+                <p class="dc-eyebrow">ABOUT DIACORE</p>
+                <h2>Welcome to DiaCore Dialysis Center</h2>
+                <h3 class="about-who-heading">Who We Are</h3>
+                <h3 class="about-center-name">DiaCore Dialysis Center</h3>
+                <p class="about-center-tagline">Your Partner in Compassionate Kidney Care</p>
+                <p>DiaCore Dialysis Center is a healthcare facility concept dedicated to supporting individuals living with kidney disease through compassionate, safe, and patient-centered care. We aim to be a trusted resource for patients and families, while promoting collaboration with healthcare professionals in the delivery of quality kidney care.</p>
+                <p>Guided by compassion, integrity, respect, and patient safety, we strive to create a supportive environment where every patient is treated with dignity and understanding throughout their dialysis journey.</p>
+                <h2>DiaCore Values</h2>
+                <ul>
+                    <li><strong>Compassion</strong> <em>(heart handshake)</em> - Providing care with empathy, kindness, and understanding.</li>
+                    <li><strong>Patient Safety</strong> <em>(shield check)</em> - Prioritizing the safety and well-being of every patient.</li>
+                    <li><strong>Respect</strong> <em>(hand heart)</em> - Treating every patient and healthcare professional with dignity.</li>
+                    <li><strong>Integrity</strong> <em>(scale)</em> - Maintaining honesty, accountability, and ethical standards.</li>
+                    <li><strong>Excellence</strong> <em>(award)</em> - Striving for quality and continuous improvement in healthcare services.</li>
+                    <li><strong>Teamwork</strong> <em>(user)</em> - Working collaboratively to provide effective and patient-centered care.</li>
+                </ul>
+                <h2 class="about-centers-heading">Nearby Medical Centers</h2>
+                <div class="about-center-grid">
+                    <article class="about-center-card">
+                        <h3>Amang Rodriguez Memorial Medical Center</h3>
+                        <img src="asset/amang-rodriguez-medical-center.png" alt="Amang Rodriguez Memorial Medical Center">
+                        <div class="about-center-details">
+                            <p><strong>Address:</strong> J3PX+C9V, Sumulong Hwy, Marikina, 1800 Metro Manila</p>
+                            <p><strong>Phone:</strong> <a href="tel:+63289415854">(02) 8941 5854</a></p>
+                            <p><strong>Hours:</strong> Open 24 hours</p>
+                        </div>
+                    </article>
+                    <article class="about-center-card">
+                        <h3>Marikina Valley Medical Center</h3>
+                        <img src="asset/marikina-valley-medical-center.png" alt="Marikina Valley Medical Center">
+                        <div class="about-center-details">
+                            <p><strong>Address:</strong> Sumulong Hwy, Marikina, 1800 Metro Manila</p>
+                            <p><strong>Phone:</strong> <a href="tel:+63286822222">(02) 8682 2222</a></p>
+                            <p><strong>Hours:</strong> Open 24 hours</p>
+                        </div>
+                    </article>
+                </div>
+                <h2>Our Mission</h2>
+                <p>DiaCore Dialysis Center is committed to providing safe, accessible, and patient-centered dialysis care through competent healthcare professionals, modern equipment, and compassionate service. We aim to support patients and their families throughout their treatment journey while promoting health, dignity, and well-being.</p>
+                <h2>Our Vision</h2>
+                <p>To be a trusted dialysis center that provides compassionate, safe, and quality renal care, helping patients achieve a healthier and better quality of life.</p>
+            </article>
+            <article class="about-detail-page services-offering-page" data-about-page-content="services" hidden>
+                <p class="dc-eyebrow">PATIENT CARE</p>
+                <h2>What We Offer Our Patients</h2>
+                <section class="offering-intro">
+                    <h3>Quality Care and Compassionate Service</h3>
+                    <p>At DiaCore Dialysis Center, we believe that every patient deserves quality care, compassion, and respect. We are committed to supporting individuals living with kidney disease by promoting patient safety, comfort, and well-being throughout their dialysis journey. Through patient education, clear communication, and a patient-centered approach, we aim to help patients and their families better understand kidney health, dialysis treatment, and proper nutrition so they can make informed decisions about their care.</p>
+                </section>
+                <section class="offering-why-choose">
+                    <h3>Why Choose DiaCore?</h3>
+                    <p>At DiaCore Dialysis Center, we believe that quality dialysis care goes beyond treatment. We aim to provide a safe, comfortable, and supportive environment where patients feel valued and cared for throughout their dialysis journey.</p>
+                    <div class="offering-benefit-grid">
+                        <article class="offering-benefit">
+                            <h4>Quality and Patient Safety</h4>
+                            <ul>
+                                <li>Patient-centered approach to care</li>
+                                <li>Emphasis on patient safety and comfort</li>
+                                <li>Patient education about kidney health and dialysis</li>
+                                <li>Guidance on proper nutrition and treatment management</li>
+                                <li>Commitment to ethical and compassionate healthcare</li>
+                                <li>Collaboration among healthcare professionals</li>
+                            </ul>
+                        </article>
+                        <article class="offering-benefit">
+                            <h4>Comfort and Convenience</h4>
+                            <ul>
+                                <li>Clean and comfortable treatment environment</li>
+                                <li>Air-conditioned facility</li>
+                                <li>Comfortable dialysis seating</li>
+                                <li>Accessible facility design</li>
+                                <li>Patient-friendly information and assistance</li>
+                                <li>Convenient access to center information and services</li>
+                            </ul>
+                        </article>
+                        <article class="offering-benefit">
+                            <h4>Accessibility and Affordability</h4>
+                            <ul>
+                                <li>Accessible information about dialysis services</li>
+                                <li>Assistance with inquiries and appointment information</li>
+                                <li>Guidance regarding applicable PhilHealth benefits</li>
+                                <li>Clear communication about treatment-related costs</li>
+                                <li>Commitment to respectful and inclusive care</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                <section class="offering-commitment">
+                    <h3>Our Commitment</h3>
+                    <p>At DiaCore Dialysis Center, our goal is to make every patient's healthcare experience more comfortable, informed, and supportive. We strive to uphold compassion, patient safety, respect, integrity, excellence, and teamwork in every aspect of our care.</p>
+                </section>
+            </article>
+            <article class="about-detail-page" data-about-page-content="team" hidden>
+                <p class="dc-eyebrow">ABOUT OUR TEAM</p>
+                <h2>Our Care Team</h2>
+                <div class="team-chart">
+                    <h3 class="team-chart-root">Care Team</h3>
+                    <img class="team-chart-photo" src="asset/careteam.png" alt="DiaCore care team">
+                    <div class="team-chart-branches">
+                        <section class="team-branch"><h3>Doctor</h3><img class="team-chart-photo" src="asset/doctors.png" alt="DiaCore doctors"></section>
+                        <section class="team-branch"><h3>Dietitian</h3><img class="team-chart-photo" src="asset/dietitian.png" alt="DiaCore dietitian team"></section>
+                        <section class="team-branch"><h3>Nurses</h3><img class="team-chart-photo" src="asset/nurses.png" alt="DiaCore nurses"></section>
+                        <section class="team-branch"><h3>Medtech</h3><img class="team-chart-photo" src="asset/medtech.png" alt="DiaCore medical technologists"></section>
+                        <section class="team-branch"><h3>Biomedical Technician</h3><img class="team-chart-photo" src="asset/biomedical%20technician.png" alt="DiaCore biomedical technician"></section>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="education-detail-section" id="patient-education" aria-labelledby="education-detail-title" hidden>
+            <div class="education-detail-header">
+                <p class="dc-eyebrow">PATIENT EDUCATION</p>
+                <button class="education-detail-close" type="button" aria-label="Close Patient Education">×</button>
+            </div>
+            <div class="education-detail-body">
+                <h2 id="education-detail-title">Patient Education</h2>
+                <div class="education-tabs" role="tablist" aria-label="Patient education topics">
+                    <button id="education-tab-kidney-disease" type="button" role="tab" data-education-tab="kidney-disease" aria-controls="education-panel-kidney-disease" aria-selected="false">Kidney Disease</button>
+                    <button id="education-tab-dialysis" type="button" role="tab" data-education-tab="dialysis" aria-controls="education-panel-dialysis" aria-selected="false">Dialysis</button>
+                    <button id="education-tab-nutrition" type="button" role="tab" data-education-tab="nutrition" aria-controls="education-panel-nutrition" aria-selected="false">Nutrition and Diet</button>
+                    <button id="education-tab-access-care" type="button" role="tab" data-education-tab="access-care" aria-controls="education-panel-access-care" aria-selected="false">Access Care</button>
+                    <button id="education-tab-medications" type="button" role="tab" data-education-tab="medications" aria-controls="education-panel-medications" aria-selected="false">Medication</button>
+                    <button id="education-tab-self-care" type="button" role="tab" data-education-tab="self-care" aria-controls="education-panel-self-care" aria-selected="false">Daily Self-Care</button>
+                </div>
+                <article class="education-topic" id="education-panel-kidney-disease" role="tabpanel" aria-labelledby="education-tab-kidney-disease" data-education-panel="kidney-disease" hidden>
+                    <img src="asset/kidney-disease.png" alt="Illustration of the urinary system, including the kidneys, ureters, bladder, and urethra">
+                    <div class="education-topic-copy">
+                        <p class="dc-eyebrow">01 · KIDNEY HEALTH</p>
+                        <h3>Understanding Kidney Disease</h3>
+                        <h4>Overview</h4>
+                        <p>The kidneys are two bean-shaped organs that play an important role in maintaining the body's overall health. They filter waste products and excess fluid from the blood, help regulate blood pressure, maintain electrolyte balance, and support red blood cell production.</p>
+                        <p>Kidney disease occurs when the kidneys become damaged and cannot function properly. This may cause waste products and excess fluid to build up in the body. Chronic kidney disease (CKD) often develops gradually and may be associated with conditions such as diabetes, high blood pressure, and other medical problems.</p>
+                        <h4>Common Signs and Symptoms</h4>
+                        <ul>
+                            <li>Swelling of the feet, ankles, or face.</li>
+                            <li>Changes in urination.</li>
+                            <li>Tiredness or weakness.</li>
+                            <li>Nausea or loss of appetite.</li>
+                            <li>Difficulty concentrating.</li>
+                            <li>Shortness of breath, particularly when fluid accumulates.</li>
+                        </ul>
+                        <p>Some people with early kidney disease may not experience noticeable symptoms, which is why regular medical checkups are important.</p>
+                        <h4>How Is Kidney Disease Managed?</h4>
+                        <p>Treatment depends on the cause and stage of the disease. Management may include controlling blood pressure and blood sugar, taking prescribed medications, following an individualized nutrition plan, and attending regular medical appointments. In advanced kidney disease, dialysis or a kidney transplant may be considered.</p>
+                        <div class="education-reminder"><h4>Important Reminder</h4><p>Early detection and appropriate medical care can help manage kidney disease. Patients should consult a qualified healthcare professional for proper evaluation and treatment.</p></div>
+                    </div>
+                </article>
+                <article class="education-topic" id="education-panel-dialysis" role="tabpanel" aria-labelledby="education-tab-dialysis" data-education-panel="dialysis" hidden>
+                    <img src="asset/understanding-dialysis.png" alt="Patient receiving hemodialysis in a treatment room">
+                    <div class="education-topic-copy">
+                        <p class="dc-eyebrow">02 · TREATMENT</p>
+                        <h3>Understanding Dialysis</h3>
+                        <h4>Overview</h4>
+                        <p>Dialysis is a medical treatment that helps remove waste products and excess fluid from the blood when the kidneys can no longer perform these functions adequately. It also helps maintain the balance of certain minerals and electrolytes in the body.</p>
+                        <p>Dialysis does not completely replace all the functions of healthy kidneys, but it can help patients manage kidney failure and maintain their health.</p>
+                        <h4>Types of Dialysis</h4>
+                        <h5>Hemodialysis</h5>
+                        <p>Hemodialysis uses a dialysis machine and a special filter called a dialyzer to remove waste products and excess fluid from the blood. Blood travels through the dialysis circuit and is returned to the body after filtering. Treatment is performed according to the schedule prescribed by the healthcare team.</p>
+                        <h5>Peritoneal Dialysis</h5>
+                        <p>Peritoneal dialysis uses the lining of the abdomen, called the peritoneum, as a natural filtering membrane. A special dialysis solution is introduced into the abdominal cavity through a catheter, allowing waste products and excess fluid to move into the solution before it is drained.</p>
+                        <h4>What Should Patients Expect?</h4>
+                        <p>Patients receiving dialysis should follow their prescribed treatment schedule, attend appointments, take medications as directed, and follow their individualized diet and fluid recommendations.</p>
+                        <div class="education-reminder"><h4>Important Reminder</h4><p>Never skip or shorten a dialysis session without consulting your healthcare team. If you experience symptoms during or after treatment, inform your healthcare provider promptly.</p></div>
+                    </div>
+                </article>
+                <article class="education-topic" id="education-panel-nutrition" role="tabpanel" aria-labelledby="education-tab-nutrition" data-education-panel="nutrition" hidden>
+                    <img src="asset/kidney-nutrition.png" alt="Balanced meal with vegetables, rice, fish, and fruit">
+                    <div class="education-topic-copy">
+                        <p class="dc-eyebrow">03 · NUTRITION</p>
+                        <h3>Nutrition and Diet for Kidney Health</h3>
+                        <h4>Overview</h4>
+                        <p>Nutrition plays an important role in managing kidney disease. The right food choices can help patients maintain energy, support overall health, and manage the levels of fluid, minerals, and waste products in the body.</p>
+                        <p>However, there is no single kidney diet that is suitable for everyone. Dietary needs vary depending on kidney function, dialysis treatment, laboratory results, medications, and other medical conditions.</p>
+                        <h4>Important Nutrients to Understand</h4>
+                        <ul>
+                            <li><strong>Sodium:</strong> Too much sodium can contribute to thirst, fluid retention, swelling, and high blood pressure. Patients may need to limit salty foods and seasonings.</li>
+                            <li><strong>Potassium:</strong> Potassium helps the muscles and heart function properly. Some patients need to limit high-potassium foods, depending on their blood test results.</li>
+                            <li><strong>Phosphorus:</strong> Excess phosphorus can affect bone health and contribute to other complications. Some patients may need to limit foods high in phosphorus.</li>
+                            <li><strong>Protein:</strong> Protein is essential for tissue repair and maintaining strength. People receiving dialysis may need more protein than some people with kidney disease who are not on dialysis.</li>
+                            <li><strong>Fluids:</strong> Some patients need to monitor their fluid intake to prevent excess fluid buildup. The recommended amount varies by individual.</li>
+                        </ul>
+                        <h4>Healthy Eating Practices</h4>
+                        <ul>
+                            <li>Follow the meal plan recommended by your renal dietitian or healthcare provider.</li>
+                            <li>Read food labels and check sodium content.</li>
+                            <li>Choose appropriate portions based on your nutritional needs.</li>
+                            <li>Keep track of fluid intake if instructed.</li>
+                            <li>Avoid taking supplements or herbal products without medical advice.</li>
+                        </ul>
+                        <div class="education-reminder"><h4>Important Reminder</h4><p>Do not eliminate entire food groups or severely restrict your diet without professional guidance. Your renal dietitian can help you choose foods that meet your individual needs.</p></div>
+                    </div>
+                </article>
+                <article class="education-topic" id="education-panel-access-care" role="tabpanel" aria-labelledby="education-tab-access-care" data-education-panel="access-care" hidden>
+                    <img src="asset/dialysis-access-care.png" alt="Illustration of an arteriovenous fistula and hemodialysis access">
+                    <div class="education-topic-copy">
+                        <p class="dc-eyebrow">04 · TREATMENT SAFETY</p>
+                        <h3>Dialysis Access Care</h3>
+                        <h4>Overview</h4>
+                        <p>Dialysis access provides a way for blood to travel between the patient's body and the dialysis machine during hemodialysis. Proper access care is essential for maintaining effective treatment and reducing the risk of infection and other complications.</p>
+                        <h4>Types of Hemodialysis Access</h4>
+                        <ul>
+                            <li><strong>Arteriovenous (AV) fistula:</strong> Created surgically by connecting an artery to a vein.</li>
+                            <li><strong>Arteriovenous (AV) graft:</strong> Uses a special tube to connect an artery and a vein.</li>
+                            <li><strong>Central venous catheter:</strong> A tube placed into a large vein for dialysis access.</li>
+                        </ul>
+                        <p>The healthcare team will determine the appropriate access based on the patient's condition and treatment needs.</p>
+                        <h4>How to Care for Your Dialysis Access</h4>
+                        <ul>
+                            <li>Keep the access area clean and follow the care instructions provided by your healthcare team.</li>
+                            <li>Check the access site for redness, swelling, warmth, drainage, or unusual pain.</li>
+                            <li>If you have an AV fistula or graft, learn how to check for its usual vibration, called a thrill, as instructed by your care team.</li>
+                            <li>Avoid blood pressure measurements, blood draws, or tight clothing on the access arm unless your healthcare team advises otherwise.</li>
+                            <li>Follow the specific instructions provided for catheter care, and keep the dressing clean and dry as directed.</li>
+                        </ul>
+                        <h4>When Should You Seek Medical Help?</h4>
+                        <p>Contact your healthcare team promptly if you notice signs of infection, a change in the usual thrill of your fistula or graft, or problems with your access. Heavy bleeding or bleeding that does not stop requires emergency medical attention.</p>
+                        <div class="education-reminder"><h4>Important Reminder</h4><p>Never attempt to repair, manipulate, or remove dialysis access equipment yourself. Proper care helps protect your access and supports safe treatment.</p></div>
+                    </div>
+                </article>
+                <article class="education-topic" id="education-panel-medications" role="tabpanel" aria-labelledby="education-tab-medications" data-education-panel="medications" hidden>
+                    <img src="asset/medication-management.png" alt="Patient writing a medication list beside a pill organizer">
+                    <div class="education-topic-copy">
+                        <p class="dc-eyebrow">05 · MEDICATION SAFETY</p>
+                        <h3>Medication Management</h3>
+                        <h4>Overview</h4>
+                        <p>Medication management is an important part of caring for people with kidney disease. Depending on their condition, patients may be prescribed medicines to help control blood pressure, manage diabetes, support red blood cell production, or regulate mineral and electrolyte levels.</p>
+                        <p>Some medications may require dose adjustments in people with reduced kidney function. Dialysis can also affect how certain medicines are removed from the body.</p>
+                        <h4>Common Medication Categories</h4>
+                        <ul>
+                            <li><strong>Blood pressure medications:</strong> Help control blood pressure and protect cardiovascular health.</li>
+                            <li><strong>Anemia treatments:</strong> Certain medicines and supplements may be prescribed to help manage anemia.</li>
+                            <li><strong>Phosphate binders:</strong> May be prescribed to help control phosphorus levels.</li>
+                            <li><strong>Vitamins and supplements:</strong> Used when clinically indicated to address specific nutritional needs.</li>
+                            <li><strong>Other prescribed medications:</strong> May be needed to manage diabetes, heart conditions, or other health concerns.</li>
+                        </ul>
+                        <p>These are examples only. Not every patient needs all these medications.</p>
+                        <h4>Safe Medication Practices</h4>
+                        <ul>
+                            <li>Take medications exactly as prescribed.</li>
+                            <li>Follow instructions about whether a medicine should be taken with food or at a specific time.</li>
+                            <li>Maintain an updated list of your medications, including supplements.</li>
+                            <li>Inform your healthcare provider about allergies and any side effects.</li>
+                            <li>Ask your pharmacist or healthcare provider before using over-the-counter medicines, herbal products, or supplements.</li>
+                            <li>Do not stop, double, or change medication doses without professional advice.</li>
+                        </ul>
+                        <div class="education-reminder"><h4>Important Reminder</h4><p>Always tell your dialysis team about all medications you take. Your healthcare provider can determine whether a medicine or its dosage needs adjustment based on your kidney function and dialysis treatment.</p></div>
+                    </div>
+                </article>
+                <article class="education-topic" id="education-panel-self-care" role="tabpanel" aria-labelledby="education-tab-self-care" data-education-panel="self-care" hidden>
+                    <img src="asset/daily-self-care.png" alt="Patient checking blood pressure and reviewing a health journal at home">
+                    <div class="education-topic-copy">
+                        <p class="dc-eyebrow">06 · EVERYDAY WELL-BEING</p>
+                        <h3>Daily Self-Care for Dialysis Patients</h3>
+                        <h4>Overview</h4>
+                        <p>Daily self-care helps dialysis patients participate actively in managing their health. Following the treatment plan, monitoring changes in the body, maintaining appropriate nutrition, and communicating with healthcare professionals can support overall well-being.</p>
+                        <p>Self-care does not replace professional medical treatment. Instead, it works together with the care provided by the healthcare team.</p>
+                        <h4>Recommended Daily Practices</h4>
+                        <ul>
+                            <li><strong>Follow your dialysis schedule:</strong> Attend every scheduled session and inform your dialysis center if a problem prevents you from attending.</li>
+                            <li><strong>Monitor your weight:</strong> If instructed, record your weight as directed by your healthcare team, particularly before and after dialysis.</li>
+                            <li><strong>Follow your nutrition and fluid plan:</strong> Use the individualized recommendations provided by your healthcare team.</li>
+                            <li><strong>Take medications correctly:</strong> Follow your prescription and report any concerns about side effects.</li>
+                            <li><strong>Protect your dialysis access:</strong> Observe the access site and follow the recommended care instructions.</li>
+                            <li><strong>Maintain personal hygiene:</strong> Practice good hand hygiene and keep the access area clean according to your care plan.</li>
+                            <li><strong>Get adequate rest and activity:</strong> Follow activity recommendations suitable for your condition and energy level.</li>
+                            <li><strong>Attend follow-up appointments:</strong> Keep track of laboratory tests and scheduled consultations.</li>
+                        </ul>
+                        <h4>When Should You Contact Your Healthcare Team?</h4>
+                        <p>Seek medical advice for new or worsening swelling, fever, signs of access infection, unusual weakness, or other concerning changes. Severe shortness of breath, chest pain, fainting, or heavy bleeding requires emergency medical attention.</p>
+                        <div class="education-reminder"><h4>Important Reminder</h4><p>Every patient's condition is different. Follow your individualized dialysis care plan and ask your healthcare team whenever you are unsure about symptoms, food choices, fluid intake, medications, or daily activities.</p></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-label="Contact information">
+            <p class="dc-eyebrow">CONTACT</p>
+            <div class="contact-layout">
+                <button class="contact-map-button" type="button" data-contact-map-open aria-label="View a larger map of DiaCore Dialysis Center">
+                    <img src="asset/map.png" alt="Map showing DiaCore Dialysis Center on Sumulong Highway, Cainta">
+                    <span>Click to enlarge map</span>
+                </button>
+                <div class="contact-details">
+                    <p><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span>Sumulong Hwy, San Isidro, Cainta, 1900 Rizal</span></p>
+                    <a href="tel:09567009886"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 9.5a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2.1Z"></path></svg><span>09567009886</span></a>
+                    <a href="mailto:diacoredialysiscenter@gmail.com"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 7L2 7"></path></svg><span>diacoredialysiscenter@gmail.com</span></a>
+                </div>
+            </div>
+            <div class="contact-form-panel">
+                <h2>Send us a message</h2>
+                <p>Fill out the form and our admin team will receive your message.</p>
+                <form id="contact-form" class="contact-form">
+                    <label>First name<input name="firstName" autocomplete="given-name" maxlength="80" required></label>
+                    <label>Last name<input name="lastName" autocomplete="family-name" maxlength="80" required></label>
+                    <label>Email<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+                    <label>Phone<input name="phone" type="tel" autocomplete="tel" maxlength="30" required></label>
+                    <label class="contact-message-field">Message<textarea name="message" rows="5" maxlength="2000" required></textarea></label>
+                    <button class="contact-submit" type="submit">Send message</button>
+                    <p class="contact-form-status" data-contact-form-status role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+        <dialog class="contact-map-dialog" data-contact-map-dialog aria-label="Enlarged map of DiaCore Dialysis Center">
+            <button class="contact-map-close" type="button" data-contact-map-close aria-label="Close enlarged map">×</button>
+            <img src="asset/map.png" alt="Map showing DiaCore Dialysis Center on Sumulong Highway, Cainta">
+        </dialog>
+    </main>
+
+    <footer class="dc-footer">
+        <div class="dc-footer-main">
+            <div class="dc-footer-brand">
+                <a class="dc-footer-logo" href="#top" aria-label="DiaCore Dialysis Center home"><img src="asset/logo.png" alt="DiaCore Dialysis Center logo"></a>
+                <p>DiaCore Dialysis Center is committed to delivering compassionate, quality dialysis care while prioritizing patient safety, comfort, and well-being.</p>
+            </div>
+            <section class="dc-footer-column">
+                <h2>Visit Us</h2>
+                <p><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v12h14V9M9 21v-7h6v7"></path></svg><span>DiaCore Dialysis Center Blg. Sumulong Hwy, San Isidro, Cainta, 1900 Rizal</span></p>
+                <p><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span>Monday - Friday 8:00AM - 5:00PM</span></p>
+            </section>
+            <section class="dc-footer-column">
+                <h2>Contacts</h2>
+                <a href="tel:+639567009886"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 9.5a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2.1Z"></path></svg><span>(+63) 956 - 700 - 9886</span></a>
+                <a href="tel:+63289116673"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 3h16v18H4zM8 7h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h8"></path></svg><span>(632) 8911 6673</span></a>
+            </section>
+            <section class="dc-footer-column">
+                <h2>Connect to Us</h2>
+                <a href="mailto:diacorecustomerservice@gmail.com"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 7L2 7"></path></svg><span>diacorecustomerservice@gmail.com</span></a>
+                <a href="https://www.facebook.com/profile.php?id=61595100987544" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a5 5 0 0 0-5 5v3H6v4h3v5h4v-5h3l1-4h-4V9a1 1 0 0 1 1-1Z"></path></svg><span>DiaCore Dialysis Center</span></a>
+            </section>
+        </div>
+        <div class="dc-footer-bottom"><span>DIACORE DIALYSIS CENTER HMS</span><span>© 2026</span></div>
+    </footer>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDAikKBNxYr5u7xEiMUOsimtvvyU7HT5e0",
+    authDomain: "diacore-ddd72.firebaseapp.com",
+    projectId: "diacore-ddd72",
+    storageBucket: "diacore-ddd72.firebasestorage.app",
+    messagingSenderId: "365273530792",
+    appId: "1:365273530792:web:1380c4f3754b47b6d15d9d",
+    measurementId: "G-440QYQ0E3G"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>

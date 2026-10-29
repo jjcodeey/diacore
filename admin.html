@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#10283f">
+	<title>Admin Portal | DIACORE Dialysis Center HMS</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+	<script src="script.js" defer></script>
+</head>
+<body data-page="admin">
+	<header class="portal-header">
+		<button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="portal-menu">
+			<span class="hamburger-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+		</button>
+		<a class="portal-brand" href="index.html" aria-label="DIACORE home">
+			<img src="asset/logo.png" alt="">
+			<span>DIACORE <small>ADMIN PORTAL</small></span>
+		</a>
+		<div class="portal-header-search" id="menu-search" role="search">
+			<input id="menu-search-input" type="search" placeholder="Search admin menu" aria-label="Search admin menu" autocomplete="off" aria-controls="menu-search-results" aria-expanded="false">
+			<ul id="menu-search-results" class="portal-search-results" role="listbox" hidden></ul>
+		</div>
+		<div class="portal-header-actions"><span id="portal-user"></span><button id="logout-button" class="logout-button" type="button">Logout</button></div>
+	</header>
+	<aside class="portal-menu" id="portal-menu" aria-label="Admin navigation">
+		<div class="menu-heading"><span>ADMIN MENU</span><button id="menu-close" type="button" aria-label="Close navigation menu">×</button></div>
+		<nav class="portal-nav">
+			<a href="#profile" data-view="profile">Admin Profile</a>
+			<a href="#patients" data-view="patients">Patients Profile</a>
+			<a href="#dashboard" data-view="dashboard">Dashboard</a>
+			<a href="#schedule" data-view="schedule">Schedule</a>
+			<a href="#billing" data-view="billing">Billing</a>
+			<a href="#equipment" data-view="equipment">Equipment & Inventory</a>
+			<a href="#announcements" data-view="announcements">Announcement</a>
+			<a href="#reports" data-view="reports">Report</a>
+			<a href="#notifications" data-view="notifications">Notification</a>
+			<a href="#messages" data-view="messages">Message</a>
+			<a href="#nurses" data-view="nurses">Healthcare Team</a>
+			<a href="#settings" data-view="settings">Settings</a>
+		</nav>
+		<p class="menu-footnote">DIACORE DIALYSIS CENTER HMS</p>
+	</aside>
+	<section id="in-center-panel" class="in-center-panel" aria-label="Dialysis Center" hidden>
+		<div class="in-center-panel-heading"><span>Dialysis Center</span><button id="in-center-minimize" type="button" aria-label="Minimize Dialysis Center">−</button></div>
+		<form class="in-center-form" aria-label="Dialysis Center form"></form>
+	</section>
+	<button id="in-center-button" class="in-center-fab" type="button" aria-expanded="false" aria-controls="in-center-panel">Dialysis Center</button>
+	<main class="portal-main">
+		<div class="portal-title-row"><div><p class="portal-kicker">DIACORE DIALYSIS CENTER HMS</p><h1 id="view-title">Dashboard</h1></div></div>
+		<div id="portal-content" class="portal-content" aria-live="polite"></div>
+	</main>
+	<footer class="portal-footer"><span>DIACORE DIALYSIS CENTER HMS</span><span>Data is stored in this browser.</span></footer>
+<template id="dietitian-education-default">
+	<article class="renal-guide-document">
+		<h1>Renal Grocery List</h1>
+		<p>This list combines foods that may fit a renal diet. Eat a balanced variety in appropriate portions. Individual needs differ, especially with diabetes, heart disease, weight concerns, laboratory results, and dialysis treatment. Follow the plan from your renal dietitian or doctor.</p>
+		<p>If you have diabetes, limit carbohydrate portions of starches, fruit, and sweets as directed. These food groups are marked with an asterisk (*).</p>
+		<h2>Starches</h2>
+		<p>Whole-grain versions may be appropriate for some people. Ask your dietitian whether they fit your plan.</p>
+		<ul><li>Plain bagels; white, French, sourdough, or rye bread; plain breadsticks</li><li>Ready-to-eat cereals such as Rice Krispies, Puffed Rice, Rice Chex, and Cornflakes</li><li>Cooked cereals such as Cream of Wheat or Rice, Farina, and Malt-o-Meal</li><li>Couscous, unsalted crackers, graham or animal crackers, croissants, dinner rolls, English muffins, and grits</li><li>Hamburger or hotdog buns, Melba toast, pita bread, pasta and noodles, unsalted popcorn and pretzels</li><li>White rice, rice cakes, and flour tortillas</li></ul>
+		<h2>Vegetables</h2>
+		<ul><li>Alfalfa or bean sprouts, asparagus, canned bamboo shoots, canned beets, bell peppers, cabbage, cauliflower, celery, cucumber, and dandelion greens</li><li>Eggplant, endive or escarole, green beans, hominy, jalapenos, jicama, leeks, lettuce, raw mushrooms, and okra</li><li>Onions, radishes, seaweed or kelp, spaghetti squash, summer squash (such as crookneck), tomatillos, canned water chestnuts, and wax beans</li></ul>
+		<h2>Fruits</h2>
+		<ul><li>Apples, applesauce, canned apricots, blackberries, blueberries, boysenberries, cherries, cranberries, and cranberry sauce</li><li>Canned fruit cocktail, grapes, kumquat, lemon, lime, loganberries, lychees, canned mandarin oranges, plums, raspberries, rhubarb, strawberries, tangerines, and watermelon</li><li>Canned pears, canned peaches, and pineapple</li></ul>
+		<h2>Meat / Protein</h2>
+		<ul><li>Beef, chicken, egg whites, fish, lamb, fresh pork, soft tofu, low-sodium tuna, turkey, shellfish, and wild game</li></ul>
+		<h2>Beverages</h2>
+		<ul><li>Apple juice, cranberry juice, cream soda, fruit punch, ginger ale, grape juice or soda, and horchata</li><li>Kool-Aid or Hi-C, lemonade, lemon-lime soda (such as Sprite or 7-Up), limeade, mineral water, Mountain Dew, and nectars (apricot, peach, pear)</li><li>Orange soda, pineapple juice, root beer, Sunny Delight citrus punch*, and tea</li></ul>
+		<h2>Fats</h2>
+		<ul><li>Butter or margarine, cream cheese, mayonnaise, sour cream, and vegetable oils such as canola or olive oil</li></ul>
+		<h2>Sweets</h2>
+		<ul><li>Apple butter; cake (sponge, angel, pound, spice, yellow, or lemon); candy corn; chewing gum; cinnamon drops; cookies (sugar, shortbread, gingersnap, or lemon cream)</li><li>Cotton candy; doughnuts without nuts or chocolate; fruit ice; gelatin; gumdrops; hard candy; honey; jam or jelly; jellybeans; maple syrup</li><li>Marmalade, marshmallows, peppermints, apple/cherry/lemon pie, fruit-flavored popsicles, Rice Krispie treats, red licorice, sorbet, sugar, vanilla wafers, and vanilla cupcakes</li></ul>
+		<h2>Seasonings</h2>
+		<ul><li>Allspice, basil, bay leaf, black pepper, caraway seed, cardamom, chili powder, chives, cilantro, cinnamon, cloves, coriander, crushed red pepper flakes, cumin, and curry powder</li><li>Dill, vanilla/almond/peppermint extracts, fennel, garlic (fresh or powder), ginger, horseradish, lemon or lime juice, liquid smoke, mint, Mrs. Dash, mustard, nutmeg, and onion (fresh, powder, or flakes)</li><li>Oregano, paprika, parsley, pimento, poultry seasoning, rosemary, saffron, sage, savory, sesame seeds, Tabasco, tarragon, thyme, turmeric, and vinegar</li></ul>
+		<h2>Sodium Management</h2>
+		<p>Sodium is found in table salt and many everyday foods. Too much may increase thirst and blood pressure and cause the body to hold extra fluid. For dialysis patients, extra fluid can build up between sessions.</p>
+		<h3>Choose foods with less salt</h3>
+		<ul><li>Limit instant noodles, salty snacks, processed meats (such as hotdogs, ham, and bacon), canned or preserved foods, fast food, and ready-made meals.</li><li>Limit salty sauces and seasonings, including soy sauce, fish sauce, and seasoning cubes.</li></ul>
+		<h3>Ways to reduce salt intake</h3>
+		<ul><li>Use less salt when cooking and limit soy sauce, fish sauce, and seasoning cubes.</li><li>Choose fresh foods over highly processed foods; taste food before adding more salt.</li><li>Use garlic, onion, ginger, lemon, or herbs for flavor.</li></ul>
+		<h3>Lower-sodium alternatives</h3>
+		<table><thead><tr><th>Instead of</th><th>Consider</th></tr></thead><tbody><tr><td>Processed meats such as hotdogs and ham</td><td>Fresh chicken or fish prepared with less salt</td></tr><tr><td>Salty chips</td><td>Unsalted snacks in portions that fit the care plan</td></tr><tr><td>Soy sauce or fish sauce</td><td>Garlic, onion, ginger, or herbs for flavor</td></tr><tr><td>Regular canned foods</td><td>Lower-sodium options when suitable</td></tr></tbody></table>
+		<h3>Read sodium food labels</h3>
+		<ul><li>Find “Sodium” on the Nutrition Facts label and check the serving size.</li><li>Compare similar products and choose the option with less sodium per serving when appropriate.</li><li>Count servings. For example, two servings containing 200 mg each provide 400 mg sodium.</li></ul>
+		<p>Eating less salt may reduce thirst. Follow your prescribed fluid allowance, use measured sips, and ask your healthcare team before using salt substitutes; some contain potassium.</p>
+		<p><strong>Patient tip:</strong> Table salt is not the only source of sodium. Sauces, seasonings, and packaged foods can also contain high amounts.</p>
+		<h2>Potassium &amp; Chronic Kidney Disease</h2>
+		<p>Potassium supports nerve and muscle function, including the heart. Healthy kidneys balance potassium. When kidney function is reduced, potassium may build up in the blood. High potassium can cause weakness, numbness, tingling, or dangerous heart rhythm problems. Your doctor monitors levels and your renal dietitian individualizes food and portion guidance. Dialysis removes some potassium, but food choices still matter between treatments.</p>
+		<p><strong>Reference note:</strong> The source guide cites 2,000–2,500 mg per day as a general range for some people with kidney disease. This is not a personal target; follow the amount set by your clinician.</p>
+		<h3>Foods often higher in potassium</h3>
+		<table><thead><tr><th>Fruits</th><th>Vegetables</th><th>Other foods</th></tr></thead><tbody><tr><td>Avocado, banana, dried fruit (such as prunes), guava, kiwi, mango, cantaloupe, honeydew, nectarine, orange, papaya, peach, pomegranate, pumpkin, and juices made from these fruits</td><td>Artichoke, beets, bok choy, broccoli, carrots, beet/chard/kale/spinach greens, cooked mushrooms, parsnips, peas, potato, tomato, vegetable juice, winter squash, yam or sweet potato, and zucchini</td><td>Dried cooked beans, cocoa/chocolate, coconut milk or water, custard/flan, granola, ice cream, lentils, milk products, molasses, nut butters, nuts and seeds, salt substitutes, wheat bran, and yogurt</td></tr></tbody></table>
+		<ul><li>Eat a variety of foods in portions that fit your plan.</li><li>Do not drink or use liquid from canned vegetables or fruit unless your care team advises otherwise.</li><li>Check serving sizes and ingredient lists; some packaged foods contain potassium additives such as potassium chloride.</li></ul>
+		<h3>Protein portions in the source guide</h3>
+		<table><thead><tr><th>Food group</th><th>Examples and portions</th></tr></thead><tbody><tr><td>Meat (7–8 g protein per portion)</td><td>Beef, veal, lamb, pork, chicken, turkey, wild game, fish or tuna (1 oz); oysters (6 medium); shrimp, crab, lobster, scallops (1 oz); one egg or two egg whites; egg substitute (1¼ cup)</td></tr><tr><td>Dairy (7–8 g protein per portion)</td><td>Milk or Lactaid (1 cup), yogurt (1 cup), cheese (1 oz), cottage cheese (¼ cup)</td></tr><tr><td>Legumes and nuts (7 g protein per portion)</td><td>Cooked dried beans (½ cup), cooked chickpeas or black-eyed peas (1½ cup), cooked lentils (1½ cup), peanut butter (2 Tbsp), tofu (check label), nuts (2 oz or ½ cup)</td></tr><tr><td>Bread and grains (2 g protein per portion)</td><td>Bread (1 slice), ½ bagel/hamburger bun/English muffin, ready-to-eat cereal (¼ cup), cooked cereal (½ cup), cooked pasta or rice (1½ cup)</td></tr></tbody></table>
+		<p><strong>Personal protein target:</strong> ____________________________________ &nbsp; Equivalent portions: __________________</p>
+		<h2>Phosphorus Management</h2>
+		<p>Phosphorus helps keep bones and teeth strong. When kidneys cannot remove enough, it can build up in the blood and affect bones and other tissues. Food choices depend on laboratory results and the individual care plan.</p>
+		<h3>Choose foods with less phosphorus</h3>
+		<ul><li>Ask whether to limit processed meats, cola drinks and some processed beverages, large servings of dairy, nuts, seeds, certain beans, and packaged foods with phosphate additives.</li><li>You do not need to avoid every food on a list; match portions and choices to your dietitian’s plan.</li></ul>
+		<h3>Food alternatives</h3>
+		<table><thead><tr><th>Instead of</th><th>Consider</th></tr></thead><tbody><tr><td>Processed meats with phosphate additives</td><td>Fresh chicken or fish prepared safely</td></tr><tr><td>Cola with phosphorus additives</td><td>Water or another kidney-friendly drink within the fluid allowance</td></tr><tr><td>Large dairy servings</td><td>Dietitian-approved alternatives in appropriate portions</td></tr><tr><td>Packaged foods with phosphate additives</td><td>Fresh, less-processed foods when available</td></tr></tbody></table>
+		<h3>Read labels and follow the care plan</h3>
+		<ul><li>Look for ingredient words containing “phos,” such as phosphoric acid or sodium phosphate.</li><li>Compare similar products and choose those with fewer phosphate additives when possible.</li><li>Keeping phosphorus in range may help protect bones and teeth and support long-term kidney care.</li><li>Take prescribed phosphate binders exactly as directed, usually with meals or snacks if instructed. Do not start, stop, or change medications without medical advice.</li><li>Attend dialysis and laboratory monitoring appointments; ask your renal dietitian when unsure about a food label.</li></ul>
+		<h2>Fluid Management Guide for Dialysis Patients</h2>
+		<p>Fluid management means tracking liquids each day. When kidneys cannot remove extra fluid effectively, it may build up and cause swelling, high blood pressure, or difficulty breathing. Follow the daily fluid allowance recommended by your doctor or renal dietitian.</p>
+		<h3>Managing daily fluid intake</h3>
+		<ul><li>Measure drinks, use a small cup, and spread drinks throughout the day.</li><li>Soup, ice, ice cream, and gelatin may count toward the daily allowance depending on the care plan.</li><li>Do not change a prescribed fluid limit without consulting your healthcare team.</li></ul>
+		<h3>Tips for managing thirst</h3>
+		<ul><li>Reduce salty foods; rinse your mouth with water and spit it out instead of swallowing.</li><li>Use small ice chips only if they fit within the allowance.</li><li>Sugar-free gum or hard candy may help if appropriate for you; take small, measured sips.</li></ul>
+		<h3>Recognize signs of fluid overload</h3>
+		<ul><li>Swelling of feet, ankles, hands, or face; sudden weight gain between sessions; increased blood pressure; shortness of breath; or unusual discomfort/bloating.</li></ul>
+		<p><strong>Urgent:</strong> Seek medical attention for severe or sudden difficulty breathing or chest pain. Ask your care team how much fluid to drink, which foods count, and report difficulty managing thirst.</p>
+		<h3>Daily fluid tracking example</h3>
+		<table><thead><tr><th>Time</th><th>Drink or liquid</th><th>Amount</th></tr></thead><tbody><tr><td>Breakfast</td><td>Water</td><td>1 small cup</td></tr><tr><td>Lunch</td><td>Drink of choice</td><td>1 measured serving</td></tr><tr><td>Afternoon</td><td>Water</td><td>1 measured serving</td></tr><tr><td>Dinner</td><td>Drink of choice</td><td>1 measured serving</td></tr></tbody></table>
+		<p>Managing fluid intake may reduce swelling and excess fluid buildup between sessions. Follow your personal allowance and contact your dialysis team about unusual swelling, rapid weight gain, or other concerns.</p>
+		<p class="renal-guide-attribution">Clinical Dietitian, Food &amp; Nutrition Services, DiaCore Dialysis Center<br>© 2026 All Rights Reserved.</p>
+	</article>
+</template>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDAikKBNxYr5u7xEiMUOsimtvvyU7HT5e0",
+    authDomain: "diacore-ddd72.firebaseapp.com",
+    projectId: "diacore-ddd72",
+    storageBucket: "diacore-ddd72.firebasestorage.app",
+    messagingSenderId: "365273530792",
+    appId: "1:365273530792:web:1380c4f3754b47b6d15d9d",
+    measurementId: "G-440QYQ0E3G"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
